@@ -5,7 +5,7 @@ Set( $WebPort, $ENV{WEB_PORT} || 80 );
 Set( $LogToSTDERR, $ENV{LOG_LEVEL} || "info" );
 Set( $Timezone, "UTC" );
 
-Set( $DatabaseType, "Pg" );
+Set( $DatabaseType, $ENV{DATABASE_TYPE} || "Pg" );
 Set( $DatabaseHost, $ENV{DATABASE_HOST} || $ENV{DB_PORT_5432_TCP_ADDR} || "localhost" );
 Set( $DatabasePort, $ENV{DATABASE_PORT} || "" );
 Set( $DatabaseName, $ENV{DATABASE_NAME} || "rt4" );
